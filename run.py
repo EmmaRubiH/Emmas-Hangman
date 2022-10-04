@@ -1,4 +1,6 @@
 import random
+from hangman_structure import parts
+from time import sleep
 
 words = ['python', 'program']
 
@@ -14,14 +16,26 @@ def update():
     for i in right:
         print(i, end = ' ')
     print()
+print('Let me think of a word')
 
-update()    
+def wait():
+    for i in range(5):
+        print('.', end = '')
+        sleep(.5)
+    print()
+
+wait()
+
+update()
+parts(len(wrong))   
 
 while True: 
 
     print('==================')
 
     guess = input("Guess a letter")
+    print('Let me check')
+    wait()
 
     if guess in picked:
         index = 0
@@ -35,6 +49,7 @@ while True:
     else:
         if guess not in wrong:
             wrong.append(guess)
+            parts(len(wrong))
         else:
             print('You already guessed that')
         print(wrong)
