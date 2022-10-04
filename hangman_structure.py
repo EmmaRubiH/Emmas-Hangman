@@ -1,4 +1,10 @@
+# file for hangman structure
+
 def parts(x):
+    """
+    This fuction prints out a hangman when enters the wrong input.
+    After every wrong/incorrect input the hangman will displayed
+    """
     if x == 0:
         print('   ',   '------')
         print('   ',   '|    |')

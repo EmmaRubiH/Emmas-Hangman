@@ -1,62 +1,84 @@
 import random
 from hangman_structure import parts
-from time import sleep
+from word import words
 
-words = ['python', 'program']
+def welcome_user():
+    """
+    This function
+    """
+    username = None
 
-picked = random.choice(words)
+    while True:
+        username = input('Enter your name\n')
 
-print('The word has', len(picked), 'letters')
+        if not username.isalpha():
+            print('Username must be alphabets only')
+            continue
+        else:
+            print('Welcome '+username)
+            break
 
 
-right = ['_'] * len(picked)
-wrong = []
+print('Welcome to Hangman')
+welcome_user()
 
-def update():
-    for i in right:
-        print(i, end = ' ')
+random_word = random.choice(words)
+print("Hint: The word has", len(random_word), "letters")
+print("=================================")
+
+correct_guess = ["_"] * len(random_word)
+incorrect_guess = []
+
+
+def update_correct_guess_list():
+    """
+    It will
+    """
+    for letter in correct_guess:
+        print(letter, end="")
     print()
-print('Let me think of a word')
 
-def wait():
-    for i in range(5):
-        print('.', end = '')
-        sleep(.5)
-    print()
 
-wait()
+def all_letter_only():
+    """
+    this function
+    """
+    while True:
+        user_input_letter = input("Type a letter: \n").lower()
+        if not user_input_letter.isalpha():
+            print('Error, please select a letter')
+        else:
+            return user_input_letter
 
-update()
-parts(len(wrong))   
 
-while True: 
+update_correct_guess_list()
+parts(len(incorrect_guess))
 
-    print('==================')
-
-    guess = input("Guess a letter")
-    print('Let me check')
-    wait()
-
-    if guess in picked:
-        index = 0
-        for i in picked:
-            if i == guess:
-                right[index] = guess
-            index += 1
-
-        update()
+while True:
+    user_input = all_letter_only()
+    if user_input in random_word:
+        INDEX = 0
+        for i in random_word:
+            if i == user_input:
+                correct_guess[INDEX] = user_input
+            INDEX += 1
+        update_correct_guess_list()
 
     else:
-        if guess not in wrong:
-            wrong.append(guess)
-            parts(len(wrong))
+        if user_input not in correct_guess:
+            incorrect_guess.append(user_input)
+            parts(len(incorrect_guess))
+            print(f'sorry, letter {user_input} is not in the word')
+
         else:
-            print('You already guessed that')
-        print(wrong)
-    if len(wrong) > 4:
-        print('You lose')
-        print('I picked', picked)
+            print("You already guessed it, please try again...")
+        print(incorrect_guess)
+    
+    if len(incorrect_guess) > 5:
+        print("You lose, please try again")
+        print("correct word is ", random_word)
         break
-    if '_' not in right:
-        print('You win')
+
+    if "_" not in correct_guess:
+        print("Congratulations!!!, you have guessed the correct letter")
         break
