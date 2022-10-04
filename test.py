@@ -11,13 +11,16 @@ wrong = []
 
 def update():
     for i in right:
-        print(i, end= ' ')
+        print(i, end=' ')
     print()
+
+
 print('Let me think of a word')
+
 
 def wait():
     for i in range(5):
-        print('.', end= '')
+        print('.', end='')
         sleep(.5)
     print()
 
@@ -57,3 +60,6 @@ while True:
     if '_' not in right:
         print('You win')
         break
+
+
+    
