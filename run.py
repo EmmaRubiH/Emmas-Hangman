@@ -1,13 +1,13 @@
 import random
 from hangman_structure import parts
 from word import words
-from time import sleep
+from termcolor import colored
 
 
 def welcome_user():
     """
     This function is for the user.
-    They will input name with letters not nummers.
+    They will input name with letters and not nummers.
     """
     username = None
 
@@ -26,34 +26,11 @@ print('Welcome to Hangman')
 welcome_user()
 
 random_word = random.choice(words)
-print('Let me think')
+print("Hint: The word has", len(random_word), "letters")
 print("=================================")
 
 correct_guess = ["_"] * len(random_word)
 incorrect_guess = []
-
-
-def update():
-    for i in correct_guess:
-        print(i, end=' ')
-    print()
-
-
-print("Hint: The word has", len(random_word), "letters")
-
-
-def wait():
-    for i in range(5):
-        print('.', end='')
-        sleep(.5)
-    print()
-
-
-wait()
-
-
-update()
-parts(len(incorrect_guess))  
 
 
 def update_correct_guess_list():
@@ -95,22 +72,22 @@ while True:
         update_correct_guess_list()
 
     else:
-        if user_input not in correct_guess:
+        if user_input not in incorrect_guess:
             incorrect_guess.append(user_input)
             parts(len(incorrect_guess))
-            print(f'Oh no, letter {user_input} is not in the word')
+            print(colored(f"Oh no, letter {user_input} is not in the word", 'red'))
 
         else:
-            print("You already guessed it, please try again...")
+            print(colored("You already guessed it, please try again...", 'blue'))
         print(incorrect_guess)
     
     if len(incorrect_guess) > 5:
-        print("Game is over, please try again")
+        print(colored("Game is over, please try again", 'red'))
         print("correct word is ", random_word)
         break
 
     if "_" not in correct_guess:
-        print("Congratulations!!!, you have guessed the correct letter")
+        print(colored("Congratulations!!!, you have guessed the correct letter", 'green'))
         break
 
     
