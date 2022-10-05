@@ -83,6 +83,7 @@ while True:
             INDEX += 1
         update_correct_guess_list()
 
+# For the wrong letter
     else:
         if user_input not in incorrect_guess:
             incorrect_guess.append(user_input)
@@ -98,11 +99,13 @@ while True:
                         'blue')
                 )
         print(incorrect_guess)
+# this is for when the game ens with to many wrong letters.
+# And shows the correct word that was choosen.
     if len(incorrect_guess) > 5:
         print(colored("Game is over, please try again", 'red'))
         print("correct word is ", random_word)
         break
-
+# If all the letters to the word choosen is correct.
     if "_" not in correct_guess:
         print(
             colored("Congratulations!!!, you have guessed the correct letter",
