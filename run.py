@@ -9,6 +9,18 @@ def welcome_user():
     This function is for the user.
     They will input name with letters and not nummers.
     """
+    print(
+        colored("#######################################",
+                'blue')
+    )
+    print(
+        colored("     | H | A | N | G | M | A | N       ",
+                'magenta')
+    )
+    print(
+        colored("#######################################",
+                'blue')
+    )
     username = None
 
     while True:
@@ -35,7 +47,7 @@ incorrect_guess = []
 
 def update_correct_guess_list():
     """
-    This function will print correct letters 
+    This function will print correct letters,
     in  to correct_guess
     """
     for letter in correct_guess:
@@ -75,19 +87,25 @@ while True:
         if user_input not in incorrect_guess:
             incorrect_guess.append(user_input)
             parts(len(incorrect_guess))
-            print(colored(f"Oh no, letter {user_input} is not in the word", 'red'))
+            print(
+                colored(f"Oh no, letter {user_input} is not in the word",
+                        'red')
+                 )
 
         else:
-            print(colored("You already guessed it, please try again...", 'blue'))
+            print(
+                colored("You already guessed it, please try again...",
+                        'blue')
+                )
         print(incorrect_guess)
-    
     if len(incorrect_guess) > 5:
         print(colored("Game is over, please try again", 'red'))
         print("correct word is ", random_word)
         break
 
     if "_" not in correct_guess:
-        print(colored("Congratulations!!!, you have guessed the correct letter", 'green'))
+        print(
+            colored("Congratulations!!!, you have guessed the correct letter",
+                    'green')
+            )
         break
-
-    
