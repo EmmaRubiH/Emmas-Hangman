@@ -1,4 +1,7 @@
-# file for hangman structure
+"""
+File for hangman structure
+"""
+
 
 def parts(x):
     """

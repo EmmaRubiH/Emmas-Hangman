@@ -1,7 +1,10 @@
+"""
+Imports
+"""
 import random
+from termcolor import colored
 from hangman_structure import parts
 from word import words
-from termcolor import colored
 
 
 def welcome_user():
@@ -112,3 +115,4 @@ while True:
                     'green')
             )
         break
+    
