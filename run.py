@@ -8,9 +8,7 @@ from hangman_structure import parts
 from word import words
 
 
-
 def start_game(): 
-
     def welcome_user():
         """
         This function is for the user.
@@ -37,9 +35,8 @@ def start_game():
                 print('Username must be alphabets only')
                 continue
             else:
-                print('Welcome '+username)
+                print(colored("Welcome "+username, 'cyan'))
                 break
-
 
     print('Welcome to Hangman')
     welcome_user()
@@ -51,7 +48,6 @@ def start_game():
     correct_guess = ["_"] * len(random_word)
     incorrect_guess = []
 
-
     def update_correct_guess_list():
         """
         This function will print correct letters,
@@ -60,7 +56,6 @@ def start_game():
         for letter in correct_guess:
             print(letter, end="")
         print()
-
 
     def all_letter_only():
         """
@@ -74,10 +69,8 @@ def start_game():
             else:
                 return user_input_letter
 
-
     update_correct_guess_list()
     parts(len(incorrect_guess))
-
 
     while True:
         print('==================')
@@ -110,19 +103,33 @@ def start_game():
     # And shows the correct word that was choosen.
         if len(incorrect_guess) > 5:
             print(colored("Game is over, please try again", 'red'))
-            print("correct word is ", random_word)
+            print("Correct word is: ", random_word)
             break
             
     # If all the letters to the word choosen is correct.
         if "_" not in correct_guess:
             print(
-                colored("Congratulations!!!, you have guessed the correct letter",
+                colored("Congratulations!!, you won",
                         'green')
                 )
             break
+
+
 start_game()
-again = str(input("Do you want to play again (type yes or no): "))
+again = str(input("Want to play again (type yes or no): "))
 if again == "yes":
-   start_game()
+    start_game()
 else:
+    print(
+            colored("#######################################",
+                    'magenta')
+        )
+    print(
+            colored("     | G | O | O | D | B | Y | E       ",
+                    'yellow')
+        )
+    print(
+            colored("########  SEE YOU NEXT TIME  ##########",
+                    'magenta')
+        )
     sys.exit(0)
