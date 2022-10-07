@@ -104,17 +104,17 @@ def start_game():
         if len(incorrect_guess) > 5:
             print(colored("Game is over, please try again", 'red'))
             print("Correct word is: ", random_word)
-            break
-            
+            break 
     # If all the letters to the word choosen is correct.
         if "_" not in correct_guess:
             print(
-                colored("Congratulations!!, you won",
+                colored("Congratulations!!, It's correct",
                         'green')
                 )
             break
 
 
+# to run the hangman one more time
 start_game()
 again = str(input("Want to play again (type yes or no): "))
 if again == "yes":
