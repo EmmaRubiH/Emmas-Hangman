@@ -14,6 +14,8 @@ The live link can be found here [Emmas hangman](https://emmas-hangman.herokuapp.
 
 The game features a welcome message to the user. To start the game the user needs to enter their name. The name must be letters only, if the user puts number an error message will appear. says "Username must be alphabets only".
 
+![welcome image](/assets/welcome.png)
+
 ## Testing
 * Tested for various bugs and functionality.
 * tested for all scenarios with invalid guesses.
