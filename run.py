@@ -8,7 +8,7 @@ from hangman_structure import parts
 from word import words
 
 
-def start_game(): 
+def start_game():
     def welcome_user():
         """
         This function is for the user.
@@ -104,7 +104,7 @@ def start_game():
         if len(incorrect_guess) > 5:
             print(colored("Game is over, please try again", 'red'))
             print("Correct word is: ", random_word)
-            break 
+            break
     # If all the letters to the word choosen is correct.
         if "_" not in correct_guess:
             print(
