@@ -16,6 +16,11 @@ It has 3 python files, run.py, word.py and hangman_structure.py
 * Since the Pep8Online website is not working properly right now. 
 I added the pep8 validation into my gitpod workspace directly.
 * All errors and warnings were fixed, except for 'ms-toolsai.jupyter'. These will not affect the game, so i chose to leave them as they are. you can se them below.
+![validation image](/assets/Validation.png)
+
+## Bugs
+1. Problems to get exit to work. after google alot i found out that i needed to import sys to get it to work.
+2. I wanted to get to play again to work. that a user could type y and n if they wanted to continue playing. I was stuck for quite a while with how it would work. the problem was that I kept insisting that it would be functions within functions (). But then realized that I have to wrap all functions in one function to get it to loop.
 ## Deploymnet
 
 ### Heroku
