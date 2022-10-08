@@ -20,7 +20,7 @@ def start_game():
         )
         print(
             colored("     | H | A | N | G | M | A | N       ",
-                    'magenta')
+                    'green')
         )
         print(
             colored("#######################################",

@@ -2,9 +2,17 @@
 
 Hangman is a Python terminal game, wich runs in the Code Institue mock terminal on Heroku.
 
-It is about guessing letters (A-Z) to form the words. If the player guesses the right letter that is within the word,
+![Am I Responsive image](/assets/amiresponsive.png)
+
+The Hangman game is about guessing letters (A-Z) to form the words. If the player guesses the right letter that is within the word,
 the letter appears at its correct position. The user has to guess the correct word until a man is hung, then the game is over.
 It has 3 python files, run.py, word.py and hangman_structure.py
+
+The live link can be found here [Emmas hangman](https://emmas-hangman.herokuapp.com/)
+
+## Features
+
+The game features a welcome message to the user. To start the game the user needs to enter their name. The name must be letters only, if the user puts number an error message will appear. says "Username must be alphabets only".
 
 ## Testing
 * Tested for various bugs and functionality.
