@@ -46,5 +46,13 @@ def parts(x):
         print('   ',   '|    o')
         print('   ',   '|   -|-')
         print('   ',   '|    | ')
+        print('   ',   '|   / ')
+        print('------------')
+    if x == 5:
+        print('   ',   '------')
+        print('   ',   '|    |')
+        print('   ',   '|    o')
+        print('   ',   '|   -|-')
+        print('   ',   '|    | ')
         print('   ',   '|   / \\')
         print('------------')

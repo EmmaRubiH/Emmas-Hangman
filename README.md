@@ -16,6 +16,15 @@ The game features a welcome message to the user. To start the game the user need
 
 ![welcome image](/assets/welcome.png)
 
+After they write down their name in the console, a welcome text will appear. After, a hint will appear with how many letters are in the word. Also a picture of a hanging but no figure yet.
+Write a letter! If the letter guessed by the user matches any of the letters in the word, the letter will appear in the blank line.
+
+![enter name](/assets/entername.png)
+
+If the letter guessed is wrong the hangingman figure will desplay piece by piece. And also a text will be displayed to the user " Oh no, letter (?) is not in the word", with red color. Type a letter will be desplayed again.
+
+![wrong letter](/assets/wrongletter.png)
+
 ## Testing
 * Tested for various bugs and functionality.
 * tested for all scenarios with invalid guesses.
