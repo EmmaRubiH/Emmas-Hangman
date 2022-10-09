@@ -42,6 +42,8 @@ If the user guessed the correct letters to the word, a text will be shown "Congr
 
 ### Lucid Chart
 
+Planning of this project was based on the flow charts using the platform Lucid Charts.
+
 ![Lucid image](/assets/Lucidchart.png)
 
 
@@ -61,6 +63,9 @@ I added the pep8 validation into my gitpod workspace directly.
 ## Bugs
 1. Problems with getting exit to work. after google alot i found out that i needed to import sys to get it to work.
 2. I wanted to get to play again to work, that a user could type y and n if they wanted to continue playing. I was stuck for quite a while with how it would work. The problem was that I kept insisting that there would be functions within functions (). But then I realized that I had to wrap all functions in one function to get it to loop.
+
+### Unfixed bugs
+* No unfixed bugs
 ## Deploymnet
 
 ### Heroku
@@ -93,3 +98,8 @@ I added the pep8 validation into my gitpod workspace directly.
 * Extra help with if/else [Stackoverflow](https://stackoverflow.com/)
 * welcome text idees [tds](https://towardsdatascience.com/prettify-your-terminal-text-with-termcolor-and-pyfiglet-880de83fda6b)
 * How to play hangman[It sorcecode](https://itsourcecode.com/free-projects/python-projects/hangman-game-in-python-with-source-code/)
+* json wordlist, over 2,465 words [stackoverflor](https://stackoverflow.com/questions/594273/how-to-pick-a-random-english-word-from-a-list)
+* To understand how to get color to text [stackoverflow](https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal)
+
+## Thanks
+I want to say tank you to my mentor Jubril for the guidance and support. and giving me feedback to improve. And ofcourse Code Institute slack community.
